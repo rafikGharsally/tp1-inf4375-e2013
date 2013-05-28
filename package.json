@@ -1,0 +1,12 @@
+{
+	"name":	"tp1-inf4375-ete2013",
+	"description": "Le tp1 du cours inf4375 de la session d'été 2013 est un système de gestion d'inscription au cours groupe des étudiants de l'UQAM",
+	"author": "fprieur@gmail.com",
+	"version": "0.0.1",
+	"dependencies": {
+		"express":	"= 3.2.5",
+		"jade":	">= 0.30",
+		"stylus":	">= 0.32"
+	},
+	"engine": "node >= 0.8"
+}
