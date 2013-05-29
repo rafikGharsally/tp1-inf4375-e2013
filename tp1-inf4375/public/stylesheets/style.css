@@ -5,3 +5,16 @@ body {
 a {
   color: #00b7ff;
 }
+div#data-info-etudiant {
+  width: 300px;
+}
+div#data-info-etudiant input {
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 5px;
+  float: right;
+  clear: both;
+}
+div#data-info-etudiant label {
+  margin-bottom: 30px;
+}

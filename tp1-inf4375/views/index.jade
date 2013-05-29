@@ -4,3 +4,22 @@ block content
 	h1 Formulaire d'inscription
 	img(src='../images/logo_uqam.png') 
 	img(src='../images/nom_uqam.gif')
+	div
+	form(action='', method='post')
+	div
+		fieldset
+			legend info étudiant
+			div(id='info-etudiant')
+				div(id='data-info-etudiant')
+					label(for='codePermanent') code permanent:
+					input(type='text', name='codePermanent')
+					br
+					label(for='prenom') Prénom:
+					input(type='text', name='prenom')
+					br
+					label(for='nom') Nom:
+					input(type='text', name='nom')
+		fieldset
+			legend Cours
+	div
+		input(type='submit',value='Enregistrer') 
