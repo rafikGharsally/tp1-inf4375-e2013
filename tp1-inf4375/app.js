@@ -7,7 +7,6 @@ var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
   , cours = require('./routes/listecours')
-  , $ = require('jquery').create()
   , http = require('http')
   , path = require('path');
 
