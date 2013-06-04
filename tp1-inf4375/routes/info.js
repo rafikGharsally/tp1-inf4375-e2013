@@ -12,12 +12,16 @@ exports.cours = function(req, res){
           'Content-Type': 'application/x-www-form-urlencoded'
      },
 	 form: {
-    	sigle: req.params[1],
-    	code_prog: req.params[0],
+    	sigle: 'inf4375'/*req.params[1]*/,
+    	code_prog: '4626' ,
     	an_ses2: 'Automne 2013',
     	Iframe: '0'
   	}
 	}, function(error, response, body) {
-	  	res.send(body);
+		var retour = body.split();
+		var debut = retour[0].indexOf("<h3>Lieu *<BR></h3>");
+		var contenuParser = retour[0].substring(debut);
+	  	res.send(contenuParser);
+	  	//res.send(retour);
 	});
 };
