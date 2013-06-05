@@ -1,0 +1,288 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'dev' ]
+2 info using npm@1.2.18
+3 info using node@v0.10.5
+4 verbose read json /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/package.json
+5 warn package.json application-name@0.0.1 No README.md file found!
+6 verbose read json /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/express/package.json
+7 verbose read json /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/jade/package.json
+8 verbose read json /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/jsdom/package.json
+9 verbose read json /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/nodeQuery/package.json
+10 verbose read json /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/request/package.json
+11 verbose read json /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/source-map/package.json
+12 verbose read json /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/stylus/package.json
+13 verbose read json /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/sys/package.json
+14 verbose from cache /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/package.json
+15 verbose readDependencies using package.json deps
+16 verbose cache add [ 'dev', null ]
+17 verbose cache add name=undefined spec="dev" args=["dev",null]
+18 verbose parsed url { protocol: null,
+18 verbose parsed url   slashes: null,
+18 verbose parsed url   auth: null,
+18 verbose parsed url   host: null,
+18 verbose parsed url   port: null,
+18 verbose parsed url   hostname: null,
+18 verbose parsed url   hash: null,
+18 verbose parsed url   search: null,
+18 verbose parsed url   query: null,
+18 verbose parsed url   pathname: 'dev',
+18 verbose parsed url   path: 'dev',
+18 verbose parsed url   href: 'dev' }
+19 silly lockFile 34c6fcec-dev dev
+20 verbose lock dev /Users/g-fallevato/.npm/34c6fcec-dev.lock
+21 silly lockFile 34c6fcec-dev dev
+22 silly lockFile 34c6fcec-dev dev
+23 verbose addNamed [ 'dev', '' ]
+24 verbose addNamed [ null, '' ]
+25 silly lockFile 82bf4cd0-dev dev@
+26 verbose lock dev@ /Users/g-fallevato/.npm/82bf4cd0-dev.lock
+27 silly addNameRange { name: 'dev', range: '', hasData: false }
+28 verbose url raw dev
+29 verbose url resolving [ 'https://registry.npmjs.org/', './dev' ]
+30 verbose url resolved https://registry.npmjs.org/dev
+31 info trying registry request attempt 1 at 17:29:53
+32 verbose etag "32D4DCV8MW8OSVCRPY0NTEDJH"
+33 http GET https://registry.npmjs.org/dev
+34 http 304 https://registry.npmjs.org/dev
+35 silly registry.get cb [ 304,
+35 silly registry.get   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+35 silly registry.get     etag: '"32D4DCV8MW8OSVCRPY0NTEDJH"',
+35 silly registry.get     date: 'Tue, 04 Jun 2013 21:29:45 GMT',
+35 silly registry.get     'content-length': '0' } ]
+36 verbose etag dev from cache
+37 silly addNameRange number 2 { name: 'dev', range: '', hasData: true }
+38 silly addNameRange versions [ 'dev',
+38 silly addNameRange   [ '0.1.0',
+38 silly addNameRange     '0.1.1',
+38 silly addNameRange     '0.1.1d',
+38 silly addNameRange     '0.1.1e',
+38 silly addNameRange     '0.1.1f',
+38 silly addNameRange     '0.1.1g',
+38 silly addNameRange     '0.1.1h',
+38 silly addNameRange     '0.1.1n',
+38 silly addNameRange     '0.1.1p',
+38 silly addNameRange     '0.1.2',
+38 silly addNameRange     '0.1.3' ] ]
+39 verbose addNamed [ 'dev', '0.1.3' ]
+40 verbose addNamed [ '0.1.3', '0.1.3' ]
+41 silly lockFile 779de891-dev-0-1-3 dev@0.1.3
+42 verbose lock dev@0.1.3 /Users/g-fallevato/.npm/779de891-dev-0-1-3.lock
+43 verbose read json /Users/g-fallevato/.npm/dev/0.1.3/package/package.json
+44 silly lockFile 779de891-dev-0-1-3 dev@0.1.3
+45 silly lockFile 779de891-dev-0-1-3 dev@0.1.3
+46 silly lockFile 82bf4cd0-dev dev@
+47 silly lockFile 82bf4cd0-dev dev@
+48 silly resolved [ { name: 'dev',
+48 silly resolved     description: 'Reruns the given file whenever the current working dir subtree has modifications.',
+48 silly resolved     version: '0.1.3',
+48 silly resolved     repository: { type: 'git', url: 'git://github.com/iliakan/node-dev.git' },
+48 silly resolved     author:
+48 silly resolved      { name: 'Ilya Kantor',
+48 silly resolved        email: 'iliakan@gmail.com',
+48 silly resolved        url: 'http://javascript.info/' },
+48 silly resolved     preferGlobal: true,
+48 silly resolved     bin: { 'node-dev': './node-dev.sh' },
+48 silly resolved     dependencies: { inotify: '>= 0.1.6' },
+48 silly resolved     readme: '# What does it do?\n\nIt autoreloads Node.JS in case of any file changes. \n\n\n    $ npm install dev -g\n\n    $ node-dev app.js\n\n    Starting: app.js\n    > server is listening on http://127.0.0.1:8080</pre>\n\n`node-dev` will rerun `app.js` whenever one of the watched files is\nchanged.\n\nThe module is based on inotify. So, unlike most other modules of this kind, *it starts watching new files automatically*. \n\nA number of additional options make the module really flexible and extendible.\n\n## Install\n\n`npm install dev -g`\n\nGlobal installation is preferred to have `node-dev` utility in path.\n\n### Advanced usage\n\nThe `node-dev` is a tiny file which basically contains:\n\n    var manager = require("dev")(options);\n    manager.start();\n\n\nThe options are:\n\n#### Running\n\n- `run`: the js file to run, e.g `./app.js`, it is the only required option.\n\n#### Watch/Ignore\n\n- `watchDir`: the folder to watch recursively, default: `.`\n- `ignoredPaths` [ paths ]: array of ignored paths, which are not watched, members can be:\n    * `string`, matched exactly against path, like `./public`,\n    * `RegExp`, e.g an extension check: `/\\.gif$/`\n    * `function(path)`, which takes the path and returns `true` if it should be ignored\n\n#### Logging\n- `debug`: enables additional logging output about watches and changes, default: `false`\n- `logger`: custom logger object, must have `error(...)` and `debug(...)` methods, delegates to `console.log` by default. Can use any other logger.\n\n#### Info\n- `onRunOutput`: callback `function(output)`, called for `stdout` data from the running process\n- `onRunError`: callback `function(output)`, called for `stderr` data from the running process\n\nYou can use these to send error notifications and integrate with your development environment if you wish.\n\n### Troubleshooting\n\nThere are limits on the number of watched files in inotify.\nSo make sure that you only watch <i>your modules</i>, not all 3rd-party npm stuff.\n\nTo change the limit:\n\n    $ echo 16384 > /proc/sys/fs/inotify/max_user_watches\n\nOr:\n\n    $ sudo sysctl fs.inotify.max_user_watches=16364\n\nTo make the change permanent, edit the file `/etc/sysctl.conf` and add this line to the end of the file:\n\n    fs.inotify.max_user_watches=16384\n\n\n### TODO\n\nTell me which features you miss?\n\nUse Github issue tracker for that.\n\nThank you.\n\n',
+48 silly resolved     readmeFilename: 'readme.md',
+48 silly resolved     _id: 'dev@0.1.3',
+48 silly resolved     _from: 'dev@' } ]
+49 info install dev@0.1.3 into /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375
+50 info installOne dev@0.1.3
+51 verbose from cache /Users/g-fallevato/.npm/dev/0.1.3/package/package.json
+52 info /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev unbuild
+53 verbose read json /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev/package.json
+54 verbose tar unpack /Users/g-fallevato/.npm/dev/0.1.3/package.tgz
+55 silly lockFile 8a43303a-013-tp1-inf4375-node-modules-dev /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev
+56 verbose lock /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev /Users/g-fallevato/.npm/8a43303a-013-tp1-inf4375-node-modules-dev.lock
+57 silly lockFile d4442e2e-levato-npm-dev-0-1-3-package-tgz /Users/g-fallevato/.npm/dev/0.1.3/package.tgz
+58 verbose lock /Users/g-fallevato/.npm/dev/0.1.3/package.tgz /Users/g-fallevato/.npm/d4442e2e-levato-npm-dev-0-1-3-package-tgz.lock
+59 silly gunzTarPerm modes [ '755', '644' ]
+60 silly gunzTarPerm extractEntry package.json
+61 silly gunzTarPerm extractEntry .npmignore
+62 silly gunzTarPerm extractEntry index.js
+63 silly gunzTarPerm extractEntry manager.js
+64 silly gunzTarPerm extractEntry node-dev.sh
+65 silly gunzTarPerm extractEntry readme.md
+66 verbose read json /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev/package.json
+67 silly lockFile 8a43303a-013-tp1-inf4375-node-modules-dev /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev
+68 silly lockFile 8a43303a-013-tp1-inf4375-node-modules-dev /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev
+69 silly lockFile d4442e2e-levato-npm-dev-0-1-3-package-tgz /Users/g-fallevato/.npm/dev/0.1.3/package.tgz
+70 silly lockFile d4442e2e-levato-npm-dev-0-1-3-package-tgz /Users/g-fallevato/.npm/dev/0.1.3/package.tgz
+71 info preinstall dev@0.1.3
+72 verbose from cache /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev/package.json
+73 verbose readDependencies using package.json deps
+74 verbose from cache /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev/package.json
+75 verbose readDependencies using package.json deps
+76 verbose cache add [ 'inotify@>= 0.1.6', null ]
+77 verbose cache add name=undefined spec="inotify@>= 0.1.6" args=["inotify@>= 0.1.6",null]
+78 verbose parsed url { protocol: null,
+78 verbose parsed url   slashes: null,
+78 verbose parsed url   auth: null,
+78 verbose parsed url   host: null,
+78 verbose parsed url   port: null,
+78 verbose parsed url   hostname: null,
+78 verbose parsed url   hash: null,
+78 verbose parsed url   search: null,
+78 verbose parsed url   query: null,
+78 verbose parsed url   pathname: 'inotify@%3E=%200.1.6',
+78 verbose parsed url   path: 'inotify@%3E=%200.1.6',
+78 verbose parsed url   href: 'inotify@%3E=%200.1.6' }
+79 verbose cache add name="inotify" spec=">= 0.1.6" args=["inotify",">= 0.1.6"]
+80 verbose parsed url { protocol: null,
+80 verbose parsed url   slashes: null,
+80 verbose parsed url   auth: null,
+80 verbose parsed url   host: null,
+80 verbose parsed url   port: null,
+80 verbose parsed url   hostname: null,
+80 verbose parsed url   hash: null,
+80 verbose parsed url   search: null,
+80 verbose parsed url   query: null,
+80 verbose parsed url   pathname: '%3E=%200.1.6',
+80 verbose parsed url   path: '%3E=%200.1.6',
+80 verbose parsed url   href: '%3E=%200.1.6' }
+81 verbose addNamed [ 'inotify', '>= 0.1.6' ]
+82 verbose addNamed [ null, '>=0.1.6' ]
+83 silly lockFile 2879ef55-inotify-0-1-6 inotify@>= 0.1.6
+84 verbose lock inotify@>= 0.1.6 /Users/g-fallevato/.npm/2879ef55-inotify-0-1-6.lock
+85 silly addNameRange { name: 'inotify', range: '>=0.1.6', hasData: false }
+86 verbose url raw inotify
+87 verbose url resolving [ 'https://registry.npmjs.org/', './inotify' ]
+88 verbose url resolved https://registry.npmjs.org/inotify
+89 info trying registry request attempt 1 at 17:29:54
+90 verbose etag "DVFGSA6IJSNC8RYXVN4COFHHK"
+91 http GET https://registry.npmjs.org/inotify
+92 http 304 https://registry.npmjs.org/inotify
+93 silly registry.get cb [ 304,
+93 silly registry.get   { server: 'CouchDB/1.3.0 (Erlang OTP/R15B03)',
+93 silly registry.get     etag: '"DVFGSA6IJSNC8RYXVN4COFHHK"',
+93 silly registry.get     date: 'Tue, 04 Jun 2013 21:29:46 GMT',
+93 silly registry.get     'content-length': '0' } ]
+94 verbose etag inotify from cache
+95 silly addNameRange number 2 { name: 'inotify', range: '>=0.1.6', hasData: true }
+96 silly addNameRange versions [ 'inotify',
+96 silly addNameRange   [ '0.1.2',
+96 silly addNameRange     '0.1.3',
+96 silly addNameRange     '0.1.4',
+96 silly addNameRange     '0.1.5',
+96 silly addNameRange     '0.1.6',
+96 silly addNameRange     '0.1.7',
+96 silly addNameRange     '0.1.8',
+96 silly addNameRange     '0.2.0',
+96 silly addNameRange     '0.2.1',
+96 silly addNameRange     '0.2.2',
+96 silly addNameRange     '1.0.0',
+96 silly addNameRange     '1.1.0',
+96 silly addNameRange     '1.2.0',
+96 silly addNameRange     '1.2.1' ] ]
+97 verbose addNamed [ 'inotify', '1.2.1' ]
+98 verbose addNamed [ '1.2.1', '1.2.1' ]
+99 silly lockFile 3b5e31f7-inotify-1-2-1 inotify@1.2.1
+100 verbose lock inotify@1.2.1 /Users/g-fallevato/.npm/3b5e31f7-inotify-1-2-1.lock
+101 verbose read json /Users/g-fallevato/.npm/inotify/1.2.1/package/package.json
+102 silly lockFile 3b5e31f7-inotify-1-2-1 inotify@1.2.1
+103 silly lockFile 3b5e31f7-inotify-1-2-1 inotify@1.2.1
+104 silly lockFile 2879ef55-inotify-0-1-6 inotify@>= 0.1.6
+105 silly lockFile 2879ef55-inotify-0-1-6 inotify@>= 0.1.6
+106 silly resolved [ { name: 'inotify',
+106 silly resolved     version: '1.2.1',
+106 silly resolved     author: { name: 'Camilo Aguilar', email: 'camilo@cloudescape.com' },
+106 silly resolved     email: 'camilo@cloudescape.com',
+106 silly resolved     keywords:
+106 silly resolved      [ 'inotify',
+106 silly resolved        'watch',
+106 silly resolved        'monitor',
+106 silly resolved        'watch files',
+106 silly resolved        'watch directories' ],
+106 silly resolved     description: 'inotify bindings for v8 javascript engine',
+106 silly resolved     repository: { type: 'git', url: 'http://github.com/c4milo/node-inotify' },
+106 silly resolved     engines: { node: '>=0.8' },
+106 silly resolved     main: 'inotify',
+106 silly resolved     scripts: { install: 'node-gyp rebuild' },
+106 silly resolved     gypfile: true,
+106 silly resolved     contributors: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+106 silly resolved     readme: '# node-inotify - monitoring file system events in Gnu/Linux with [NodeJS][nodejs_home]\nThe inotify API provides a mechanism for monitoring file system events.\nInotify can be used to monitor individual files, or to monitor directories.\nWhen a directory is monitored, inotify will return events for the directory\nitself, and for files inside the directory. [(ref: GNU/Linux Manual)][inotify.7]\n\n## Installation\n[NodeJS][nodejs_dev] versions 0.8.x are currently supported and tested.\n\n### Install from NPM (Easy way)\n    $ npm install inotify\n\n### Install from git\n    $ npm install node-gyp -g\n    $ git clone git://github.com/c4milo/node-inotify.git\n    $ cd node-inotify\n    $ node-gyp rebuild\n\n## API\n  * `var inotify = new Inotify()`: Create a new instance of Inotify. By default it\'s in persistent mode.\n  You can specify `false` in `var inotify = new Inotify(false)` to use the non persistent mode.\n\n  * `var wd = inotify.addWatch(arg)`:  Add a watch for files or directories. This will then return a watch descriptor. The argument is an object as follows\n        var arg = { path: \'path to be monitored\',\n                    watch_for: an optional OR\'ed set of events to watch for.\n                               If they\'re not specified, it will use\n                               Inotify.IN_ALL_EVENTS by default,\n                    callback: Callback function that will receive each event.\n        }\nYou can call this function as many times as you want to monitor different paths.\n**Inotify monitoring of directories is not recursive**: to monitor subdirectories\nunder a directory, additional watches must be created.\n\n  * `inotify.removeWatch(watch_descriptor)`: Remove a watch associated with the watch_descriptor param and returns `true` if the action was succesful or `false` in the opposite case. Removing a watch cause an `Inotify.IN_IGNORED` event to be generated for this watch descriptor.\n\n  * `inotify.close()`: Remove all the watches and close the inotify\'s file descriptor. Returns `true` if the action was succesful or false in the opposite case.\n\n### Event object structure\n```javascript\n    var event = {   watch: Watch descriptor,\n                    mask: Mask of events,\n                    cookie: Cookie that permits to associate events,\n                    name: Optional name of the object being watched\n                };\n```\n\nThe `event.name` property is only present when an event is returned for a file inside a\nwatched directory; it identifies the file pathname relative to the watched\ndirectory.\n\n\n## Example of use\n\n```javascript\n    var Inotify = require(\'inotify\').Inotify;\n    var inotify = new Inotify(); //persistent by default, new Inotify(false) //no persistent\n\n    var data = {}; //used to correlate two events\n\n    var callback = function(event) {\n        var mask = event.mask;\n        var type = mask & Inotify.IN_ISDIR ? \'directory \' : \'file \';\n        event.name ? type += \' \' + event.name + \' \': \' \';\n\n        //the porpuse of this hell of \'if\'\n        //statements is only illustrative.\n\n        if(mask & Inotify.IN_ACCESS) {\n            console.log(type + \'was accessed \');\n        } else if(mask & Inotify.IN_MODIFY) {\n            console.log(type + \'was modified \');\n        } else if(mask & Inotify.IN_OPEN) {\n            console.log(type + \'was opened \');\n        } else if(mask & Inotify.IN_CLOSE_NOWRITE) {\n            console.log(type + \' opened for reading was closed \');\n        } else if(mask & Inotify.IN_CLOSE_WRITE) {\n            console.log(type + \' opened for writing was closed \');\n        } else if(mask & Inotify.IN_ATTRIB) {\n            console.log(type + \'metadata changed \');\n        } else if(mask & Inotify.IN_CREATE) {\n            console.log(type + \'created\');\n        } else if(mask & Inotify.IN_DELETE) {\n            console.log(type + \'deleted\');\n        } else if(mask & Inotify.IN_DELETE_SELF) {\n            console.log(type + \'watched deleted \');\n        } else if(mask & Inotify.IN_MOVE_SELF) {\n            console.log(type + \'watched moved\');\n        } else if(mask & Inotify.IN_IGNORED) {\n            console.log(type + \'watch was removed\');\n        } else if(mask & Inotify.IN_MOVED_FROM) {\n            data = event;\n            data.type = type;\n        } else if(mask & Inotify.IN_MOVED_TO) {\n            if( Object.keys(data).length &&\n                data.cookie === event.cookie) {\n                console.log(type + \' moved to \' + data.type);\n                data = {};\n            }\n        }\n    }\n    var home_dir = { path:      \'/home/camilo\', // <--- change this for a valid directory in your machine.\n                     watch_for: Inotify.IN_OPEN | Inotify.IN_CLOSE,\n                     callback:  callback\n                  };\n\n    var home_watch_descriptor = inotify.addWatch(home_dir);\n\n    var home2_dir = { path:      \'/home/bob\', // <--- change this for a valid directory in your machine\n                      watch_for: Inotify.IN_ALL_EVENTS,\n                      callback:  callback\n                  };\n\n    var home2_wd = inotify.addWatch(home2_dir);\n\n```\n\n## Inotify Events\n\n### Watch for:\n * **Inotify.IN_ACCESS:** File was accessed (read)\n * **Inotify.IN_ATTRIB:** Metadata changed, e.g., permissions, timestamps, extended attributes, link count (since Linux 2.6.25), UID, GID, etc.\n * **Inotify.IN_CLOSE_WRITE:** File opened for writing was closed\n * **Inotify.IN_CLOSE_NOWRITE:** File not opened for writing was closed\n * **Inotify.IN_CREATE:** File/directory created in the watched directory\n * **Inotify.IN_DELETE:** File/directory deleted from the watched directory\n * **Inotify.IN_DELETE_SELF:** Watched file/directory was deleted\n * **Inotify.IN_MODIFY:** File was modified\n * **Inotify.IN_MOVE_SELF:** Watched file/directory was moved\n * **Inotify.IN_MOVED_FROM:** File moved out of the watched directory\n * **Inotify.IN_MOVED_TO:** File moved into watched directory\n * **Inotify.IN_OPEN:** File was opened\n * **Inotify.IN_ALL_EVENTS:** Watch for all kind of events\n * **Inotify.IN_CLOSE:**  (IN_CLOSE_WRITE | IN_CLOSE_NOWRITE)  Close\n * **Inotify.IN_MOVE:**  (IN_MOVED_FROM | IN_MOVED_TO)  Moves\n\n### Additional Flags:\n * **Inotify.IN_ONLYDIR:** Only watch the path if it is a directory.\n * **Inotify.IN_DONT_FOLLOW:** Do not follow symbolics links\n * **Inotify.IN_ONESHOT:** Only send events once\n * **Inotify.IN_MASK_ADD:** Add (OR) events to watch mask for this pathname if it already exists (instead of replacing the mask).\n\n### The following bits may be set in the `event.mask` property returned in the callback\n * **Inotify.IN_IGNORED:** Watch was removed explicitly with inotify.removeWatch(watch_descriptor) or automatically (the file was deleted, or the file system was unmounted)\n * **Inotify.IN_ISDIR:** Subject of this event is a directory\n * **Inotify.IN_Q_OVERFLOW:** Event queue overflowed (wd is -1 for this event)\n * **Inotify.IN_UNMOUNT:** File system containing the watched object was unmounted\n\n\n\n## License\n(The MIT License)\n\nCopyright 2012 Camilo Aguilar. All rights reserved.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to\ndeal in the Software without restriction, including without limitation the\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or\nsell copies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS\nIN THE SOFTWARE.\n\n\n[inotify.7]: http://www.kernel.org/doc/man-pages/online/pages/man7/inotify.7.html "http://www.kernel.org/doc/man-pages/online/pages/man7/inotify.7.html"\n[nodejs_home]: http://www.nodejs.org\n[nodejs_dev]: http://github.com/joyent/node\n[code_example]: http://gist.github.com/476119\n\n',
+106 silly resolved     readmeFilename: 'README.md',
+106 silly resolved     _id: 'inotify@1.2.1',
+106 silly resolved     _from: 'inotify@>= 0.1.6' } ]
+107 info install inotify@1.2.1 into /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev
+108 info installOne inotify@1.2.1
+109 verbose from cache /Users/g-fallevato/.npm/inotify/1.2.1/package/package.json
+110 info /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev/node_modules/inotify unbuild
+111 verbose read json /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev/node_modules/inotify/package.json
+112 verbose tar unpack /Users/g-fallevato/.npm/inotify/1.2.1/package.tgz
+113 silly lockFile ecd25296-modules-dev-node-modules-inotify /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev/node_modules/inotify
+114 verbose lock /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev/node_modules/inotify /Users/g-fallevato/.npm/ecd25296-modules-dev-node-modules-inotify.lock
+115 silly lockFile b0320322-to-npm-inotify-1-2-1-package-tgz /Users/g-fallevato/.npm/inotify/1.2.1/package.tgz
+116 verbose lock /Users/g-fallevato/.npm/inotify/1.2.1/package.tgz /Users/g-fallevato/.npm/b0320322-to-npm-inotify-1-2-1-package-tgz.lock
+117 silly gunzTarPerm modes [ '755', '644' ]
+118 silly gunzTarPerm extractEntry package.json
+119 silly gunzTarPerm extractEntry .npmignore
+120 silly gunzTarPerm extractEntry README.md
+121 silly gunzTarPerm extractEntry LICENSE
+122 silly gunzTarPerm extractEntry example.js
+123 silly gunzTarPerm extractEntry inotify.js
+124 silly gunzTarPerm extractEntry AUTHORS
+125 silly gunzTarPerm extractEntry binding.gyp
+126 silly gunzTarPerm extractEntry src/bindings.cc
+127 silly gunzTarPerm extractEntry src/bindings.h
+128 silly gunzTarPerm extractEntry src/node_inotify.cc
+129 silly gunzTarPerm extractEntry src/node_inotify.h
+130 verbose read json /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev/node_modules/inotify/package.json
+131 silly lockFile ecd25296-modules-dev-node-modules-inotify /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev/node_modules/inotify
+132 silly lockFile ecd25296-modules-dev-node-modules-inotify /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev/node_modules/inotify
+133 silly lockFile b0320322-to-npm-inotify-1-2-1-package-tgz /Users/g-fallevato/.npm/inotify/1.2.1/package.tgz
+134 silly lockFile b0320322-to-npm-inotify-1-2-1-package-tgz /Users/g-fallevato/.npm/inotify/1.2.1/package.tgz
+135 info preinstall inotify@1.2.1
+136 verbose from cache /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev/node_modules/inotify/package.json
+137 verbose readDependencies using package.json deps
+138 verbose from cache /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev/node_modules/inotify/package.json
+139 verbose readDependencies using package.json deps
+140 silly resolved []
+141 verbose about to build /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev/node_modules/inotify
+142 info build /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev/node_modules/inotify
+143 verbose from cache /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev/node_modules/inotify/package.json
+144 verbose linkStuff [ false,
+144 verbose linkStuff   false,
+144 verbose linkStuff   false,
+144 verbose linkStuff   '/Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev/node_modules' ]
+145 info linkStuff inotify@1.2.1
+146 verbose linkBins inotify@1.2.1
+147 verbose linkMans inotify@1.2.1
+148 verbose rebuildBundles inotify@1.2.1
+149 info install inotify@1.2.1
+150 verbose unsafe-perm in lifecycle true
+151 silly exec sh "-c" "node-gyp rebuild"
+152 silly sh,-c,node-gyp rebuild,/Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev/node_modules/inotify spawning
+153 info inotify@1.2.1 Failed to exec install script
+154 info /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev/node_modules/inotify unbuild
+155 verbose from cache /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev/node_modules/inotify/package.json
+156 info preuninstall inotify@1.2.1
+157 info uninstall inotify@1.2.1
+158 verbose false,/Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules,/Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev/node_modules unbuild inotify@1.2.1
+159 info postuninstall inotify@1.2.1
+160 verbose about to build /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev
+161 info /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev unbuild
+162 verbose from cache /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/dev/package.json
+163 info preuninstall dev@0.1.3
+164 info uninstall dev@0.1.3
+165 verbose true,/Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules,/Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules unbuild dev@0.1.3
+166 verbose /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375/node_modules/.bin,[object Object] binRoot
+167 info postuninstall dev@0.1.3
+168 error inotify@1.2.1 install: `node-gyp rebuild`
+168 error `sh "-c" "node-gyp rebuild"` failed with 1
+169 error Failed at the inotify@1.2.1 install script.
+169 error This is most likely a problem with the inotify package,
+169 error not with npm itself.
+169 error Tell the author that this fails on your system:
+169 error     node-gyp rebuild
+169 error You can get their info via:
+169 error     npm owner ls inotify
+169 error There is likely additional logging output above.
+170 error System Darwin 12.3.0
+171 error command "node" "/usr/local/bin/npm" "install" "dev"
+172 error cwd /Users/g-fallevato/Documents/tp1-inf4375-e2013/tp1-inf4375
+173 error node -v v0.10.5
+174 error npm -v 1.2.18
+175 error code ELIFECYCLE
+176 verbose exit [ 1, true ]

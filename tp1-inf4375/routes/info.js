@@ -12,16 +12,25 @@ exports.cours = function(req, res){
           'Content-Type': 'application/x-www-form-urlencoded'
      },
 	 form: {
-    	sigle: 'inf4375'/*req.params[1]*/,
-    	code_prog: '4626' ,
+    	sigle: 'inf1120'/*req.params[1]*/,
+    	code_prog: '4626',
     	an_ses2: 'Automne 2013',
     	Iframe: '0'
   	}
 	}, function(error, response, body) {
 		var retour = body.split();
-		var debut = retour[0].indexOf("<h3>Lieu *<BR></h3>");
+		var debut = retour[0].indexOf("<TD ALIGN=\"CENTER\" CLASS=\"paragraphe\">");
 		var contenuParser = retour[0].substring(debut);
-	  	res.send(contenuParser);
+
+		var arrayTemp = contenuParser.match(/<TD ALIGN="CENTER" CLASS="paragraphe">([0-9]{3,}).*\n<TD ALIGN="CENTER" CLASS="paragraphe">([0-9]{1,3})/g);
+		var arrayFinal = new Array();
+		for(var i = 0 ; i < arrayTemp.length ; i++){
+			arrayTemp[i] = arrayTemp[i].replace("<TD ALIGN=\"CENTER\" CLASS=\"paragraphe\">", "");
+			arrayTemp[i] = arrayTemp[i].replace("</TD>", "");
+			arrayTemp[i] = arrayTemp[i].replace("<TD ALIGN=\"CENTER\" CLASS=\"paragraphe\">", "");
+			arrayFinal[i] = arrayTemp[i];
+		}
+	  	res.send(arrayFinal);
 	  	//res.send(retour);
 	});
 };
