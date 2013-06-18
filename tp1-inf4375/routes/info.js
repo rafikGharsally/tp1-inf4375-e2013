@@ -12,7 +12,7 @@ exports.cours = function(req, res){
           'Content-Type': 'application/x-www-form-urlencoded'
      },
 	 form: {
-    	sigle: 'inf1120'/*req.params[1]*/,
+    	sigle: req.params[0].split('/')[0],
     	code_prog: '4626',
     	an_ses2: 'Automne 2013',
     	Iframe: '0'
@@ -24,13 +24,19 @@ exports.cours = function(req, res){
 
 		var arrayTemp = contenuParser.match(/<TD ALIGN="CENTER" CLASS="paragraphe">([0-9]{3,}).*\n<TD ALIGN="CENTER" CLASS="paragraphe">([0-9]{1,3})/g);
 		var arrayFinal = new Array();
-		for(var i = 0 ; i < arrayTemp.length ; i++){
-			arrayTemp[i] = arrayTemp[i].replace("<TD ALIGN=\"CENTER\" CLASS=\"paragraphe\">", "");
-			arrayTemp[i] = arrayTemp[i].replace("</TD>", "");
-			arrayTemp[i] = arrayTemp[i].replace("<TD ALIGN=\"CENTER\" CLASS=\"paragraphe\">", "");
-			arrayFinal[i] = arrayTemp[i];
-		}
+
+		if(arrayTemp != null) {
+			for(var i = 0 ; i < arrayTemp.length ; i++){
+				arrayTemp[i] = arrayTemp[i].replace("<TD ALIGN=\"CENTER\" CLASS=\"paragraphe\">", "");
+				arrayTemp[i] = arrayTemp[i].replace("</TD>", "");
+				arrayTemp[i] = arrayTemp[i].replace("<TD ALIGN=\"CENTER\" CLASS=\"paragraphe\">", "");
+				arrayFinal[i] = arrayTemp[i];
+			}
+			
 	  	res.send(arrayFinal);
-	  	//res.send(retour);
+
+		} else {
+			res.send([])
+		}
 	});
 };
