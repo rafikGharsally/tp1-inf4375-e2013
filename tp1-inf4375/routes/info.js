@@ -22,23 +22,25 @@ exports.cours = function(req, res){
 		var debut = retour[0].indexOf("<TD ALIGN=\"CENTER\" CLASS=\"paragraphe\">");
 		var contenuParser = retour[0].substring(debut);
 
-		var arrayTemp = contenuParser.match(/<TD ALIGN="CENTER" CLASS="paragraphe">([0-9]{3,}).*\n<TD ALIGN="CENTER" CLASS="paragraphe">([0-9]{1,3})/g);
+		var arrayCoursGroupe = contenuParser.match(/<TD ALIGN="CENTER" CLASS="paragraphe">([0-9]{3,}).*\n<TD ALIGN="CENTER" CLASS="paragraphe">([0-9]{1,3})/g);
 		var arrayFinal = new Array();
+		var dataCours = new Array()
 
-		console.log(arrayTemp);
+		console.log(arrayCoursGroupe);
 
-		if(arrayTemp != null) {
+		if(arrayCoursGroupe != null) {
 			arrayFinal.push({'valide': 'oui'});
-			for(var i = 0 ; i < arrayTemp.length ; i++){
-				arrayTemp[i] = arrayTemp[i].replace("<TD ALIGN=\"CENTER\" CLASS=\"paragraphe\">", "");
-				arrayTemp[i] = arrayTemp[i].replace("</TD>", "");
-				arrayTemp[i] = arrayTemp[i].replace("<TD ALIGN=\"CENTER\" CLASS=\"paragraphe\">", "");
-				arrayFinal.push(
+			for(var i = 0 ; i < arrayCoursGroupe.length ; i++){
+				arrayCoursGroupe[i] = arrayCoursGroupe[i].replace("<TD ALIGN=\"CENTER\" CLASS=\"paragraphe\">", "");
+				arrayCoursGroupe[i] = arrayCoursGroupe[i].replace("</TD>", "");
+				arrayCoursGroupe[i] = arrayCoursGroupe[i].replace("<TD ALIGN=\"CENTER\" CLASS=\"paragraphe\">", "");
+				dataCours.push(
 					{ 
-						'groupe' : arrayTemp[i].split("\n")[0],
-						'place_restantes' : arrayTemp[i].split("\n")[1]
+						'groupe' : arrayCoursGroupe[i].split("\n")[0],
+						'place_restantes' : arrayCoursGroupe[i].split("\n")[1]
 				});
 			}
+		arrayFinal.push({'cours':dataCours});
 		res.send(arrayFinal);
 
 		} else {
