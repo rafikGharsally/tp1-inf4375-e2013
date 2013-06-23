@@ -33,3 +33,6 @@ div.champs-cours span {
   margin-right: 20px;
   padding: 10px;
 }
+div.champs-cours span#dispo-* {
+  color: #f00;
+}

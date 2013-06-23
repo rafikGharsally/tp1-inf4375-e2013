@@ -1,7 +1,8 @@
 extends layout
 
 block content
-	script(src='../jquery/script-Fred.js')
+	script(src='../jquery/animations.js')
+	script(src='../jquery/ajax.js')
 	h1 Formulaire d'inscription
 	img(src='../images/logo_uqam.png') 
 	img(src='../images/nom_uqam.gif')
@@ -29,17 +30,17 @@ block content
 					img(src='../images/comment_ajax_loader.gif')
 				br
 				div(class="champs-cours")
-					input(type='text', name="cours1")
+					input(type='text', id="cours1") 
 					input(type='text', name="cours2")
 					input(type='text', name="cours3")
 					input(type='text', name="cours4")
 					input(type='text', name="cours5")
 
-					span(id="info-cours1") allo fsd;sdhsdjfsdl;kfj;lskdjf;lksdjf;lk
-					span(id="info-cours2") allo
-					span(id="info-cours3") allo
-					span(id="info-cours4") allo
-					span(id="info-cours5") allo
+					span(id="info-cours1") 
+					span(id="info-cours2") 
+					span(id="info-cours3") 
+					span(id="info-cours4") 
+					span(id="info-cours5") 
 					br
 					br
-					input(type='submit',value='Enregistrer') 
+					input(type='submit',value='Enregistrer', id="boutonEnregistrer") 
