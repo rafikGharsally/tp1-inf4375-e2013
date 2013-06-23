@@ -31,9 +31,6 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
-app.get('/users', user.list);
-app.get('/test', routes.test);
-app.post('/listecours', cours.maliste);
 app.get('/info/*', info.cours);
 
 
