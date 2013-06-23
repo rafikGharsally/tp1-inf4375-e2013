@@ -18,3 +18,12 @@ div#data-info-etudiant input {
 div#data-info-etudiant label {
   margin-bottom: 30px;
 }
+div.champs-cours input {
+  width: 175px;
+  margin-left: 40px;
+  margin-right: 20px;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 5px;
+  clear: both;
+}

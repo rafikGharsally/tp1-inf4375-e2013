@@ -2,6 +2,7 @@
 var jsdom  = require('jsdom');
 var request = require('request');
 var sys = require('sys');
+var uqamParser = require('./UqamResponseParser/UqamResponseParser.js')
 
 exports.cours = function(req, res){
 // GET /user/tj
@@ -21,12 +22,15 @@ exports.cours = function(req, res){
 		var retour = body.split();
 		var debut = retour[0].indexOf("<TD ALIGN=\"CENTER\" CLASS=\"paragraphe\">");
 		var contenuParser = retour[0].substring(debut);
+		var arrayDataComplet = new Array();
+
+		var arrayDataComplet = contenuParser.match(/<TD ALIGN="CENTER" CLASS="paragraphe">.*\n<TD ALIGN="CENTER" CLASS="paragraphe">/g);
 
 		var arrayCoursGroupe = contenuParser.match(/<TD ALIGN="CENTER" CLASS="paragraphe">([0-9]{3,}).*\n<TD ALIGN="CENTER" CLASS="paragraphe">([0-9]{1,3})/g);
 		var arrayFinal = new Array();
-		var dataCours = new Array()
+		var dataCours = new Array();
 
-		console.log(arrayCoursGroupe);
+		console.log(arrayDataComplet); // à garder pour compléter les séances horaires dans le parsing
 
 		if(arrayCoursGroupe != null) {
 			arrayFinal.push({'valide': 'oui'});
