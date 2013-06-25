@@ -8,6 +8,7 @@ var express = require('express')
   , info = require('./routes/info')
   , inscription = require('./routes/inscription')
   , erreur = require('./routes/erreur')
+  , horaire = require('./routes/horaire')
   , http = require('http')
   , path = require('path');
 
@@ -33,6 +34,7 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/info/*', info.cours);
 app.post('/inscription', inscription.enregistrer);
+app.get('/horaire', horaire.consulter);
 
 //Attraper les pages d'erreur 404
 app.use(function(req, res, next){
@@ -42,8 +44,6 @@ app.use(function(req, res, next){
     return;
   }
 });
-
-
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

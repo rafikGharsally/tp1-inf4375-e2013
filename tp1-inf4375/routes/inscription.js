@@ -25,7 +25,6 @@ exports.enregistrer = function(req, res){
 	        	res.render('erreur-inscription');
 		    } else {
 		        res.render('inscription');
-		        console.log(req.body['code_permanent-etudiant']);
 		    }
 		}); 
 };

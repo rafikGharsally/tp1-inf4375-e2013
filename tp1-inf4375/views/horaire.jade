@@ -3,11 +3,13 @@ extends layout
 block content
 	script(src='../jquery/animations.js')
 	script(src='../jquery/ajax.js')
-	h1 Merci pour votre inscription
+	h1 Horaire de #{prenom} #{nom}
 	img(src='../images/logo_uqam.png') 
 	img(src='../images/nom_uqam.gif')
 	br
 	br
-	a(href="/horaire") Consultez votre horaire
-	br
-	a(href="/") Recommencez de nouveau
+	// affichage des cours à compléter
+	//- each item, i in #{liste-cours}
+	//- 	li = item.sigle
+
+	a(href="/") retourner à la page d'accueil
