@@ -2,7 +2,6 @@
 var jsdom  = require('jsdom');
 var request = require('request');
 var sys = require('sys');
-var uqamParser = require('./UqamResponseParser/UqamResponseParser.js')
 
 exports.cours = function(req, res){
 // GET /user/tj
@@ -30,7 +29,7 @@ exports.cours = function(req, res){
 		var arrayFinal = new Array();
 		var dataCours = new Array();
 
-		console.log(arrayDataComplet); // à garder pour compléter les séances horaires dans le parsing
+		//console.log(arrayDataComplet); // à garder pour compléter les séances horaires dans le parsing
 
 		if(arrayCoursGroupe != null) {
 			arrayFinal.push({'valide': 'oui'});

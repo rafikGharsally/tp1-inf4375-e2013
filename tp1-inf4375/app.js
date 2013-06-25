@@ -5,10 +5,9 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , user = require('./routes/user')
-  , cours = require('./routes/listecours')
   , info = require('./routes/info')
   , inscription = require('./routes/inscription')
+  , erreur = require('./routes/erreur')
   , http = require('http')
   , path = require('path');
 
@@ -34,6 +33,16 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 app.get('/info/*', info.cours);
 app.post('/inscription', inscription.enregistrer);
+
+//Attraper les pages d'erreur 404
+app.use(function(req, res, next){
+  res.status(404);
+  if (req.accepts('html')) {
+    res.render('erreur');
+    return;
+  }
+});
+
 
 
 http.createServer(app).listen(app.get('port'), function(){

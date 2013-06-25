@@ -17,9 +17,15 @@ $(document).ready(function(){
 	$("#boutonEnregistrer").click(function(){
 		$.ajax({
 			type: "POST",
-			url: "http://localhost:3000/inscription"
-		}).done(function ( data ) {
-			alert("done");
-			});	
+			url: "http://localhost:3000/inscription",
+			data: {
+				code_permanent: $("#code_permanent-etudiant").val(),
+				prenom: $("#prenom-etudiant").val(),
+				nom: $("#nom-etudiant").val()
+			},
+			success: function(msg){
+	        	
+	    	}
+		});	
 	});
 });
