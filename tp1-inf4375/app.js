@@ -8,6 +8,7 @@ var express = require('express')
   , user = require('./routes/user')
   , cours = require('./routes/listecours')
   , info = require('./routes/info')
+  , inscription = require('./routes/inscription')
   , http = require('http')
   , path = require('path');
 
@@ -32,6 +33,7 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/info/*', info.cours);
+app.post('/inscription', inscription.enregistrer);
 
 
 http.createServer(app).listen(app.get('port'), function(){

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	//cours1 ajax
 	$("#cours1").keyup(function(){
 		$("#enTraitement").show();
 		$.ajax({
@@ -10,5 +11,15 @@ $(document).ready(function(){
 				$('#info-cours1').html(resultat.valide);
 			});	
 		});
+	});
+
+	//Traitement du bouton enregistrer
+	$("#boutonEnregistrer").click(function(){
+		$.ajax({
+			type: "POST",
+			url: "http://localhost:3000/inscription"
+		}).done(function ( data ) {
+			alert("done");
+			});	
 	});
 });
