@@ -9,6 +9,9 @@
     "express": "3.2.5",
     "jade": "*",
     "stylus": "*",
-    "xmlbuilder": "~0.4.2"
+    "xmlbuilder": "~0.4.2",
+    "jsdom": "~0.6.5",
+    "nodeQuery": "0.0.9-1",
+    "request": "~2.21.0"
   }
 }
