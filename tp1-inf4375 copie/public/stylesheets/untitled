@@ -1,0 +1,5 @@
+$(document).ready(function(){
+	$("#info-cours1").click(function(){
+		$("#enTraitement").toggle();
+	});
+});

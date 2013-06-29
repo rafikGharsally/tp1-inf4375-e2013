@@ -1,0 +1,45 @@
+extends layout
+
+block content
+	script(src='../jquery/animations.js')
+	script(src='../jquery/ajax.js')
+	h1 Formulaire d'inscription
+	img(src='../images/logo_uqam.png') 
+	img(src='../images/nom_uqam.gif')
+	div
+	form(id='form-info-etudiant', action='inscription', method='post')
+		div
+			fieldset
+				legend info étudiant
+				div(id='info-etudiant')
+					div(id='data-info-etudiant')
+						label(for='sigle') code permanent:
+						input(type='text', name='code_permanent-etudiant', id="code_permanent-etudiant") 
+						br
+						label(for='code_prog') Prénom:
+						input(type='text', name='prenom-etudiant', id="prenom-etudiant")
+						br
+						br
+						label(for='an_ses2') Nom:
+						input(type='text', name='nom-etudiant', id="nom-etudiant")
+						br
+						br
+						label(for='code_prog') Code programme:
+						input(type='text', name='code_prog', id="code_prog")
+						input(type='hidden', name='Iframe', value='O')
+			fieldset(id="fieldset-cours")
+				legend Cours
+				br
+				div(id="enTraitement")
+					img(src='../images/comment_ajax_loader.gif')
+				br
+				div(class="champs-cours")
+					input(type='text', name="cours1", id="cours1") 
+					input(type='text', name="cours2", id="cours2")
+					input(type='text', name="cours3", id="cours3")
+					input(type='text', name="cours4", id="cours4")
+					input(type='text', name="cours5", id="cours5")
+
+					br
+					br
+					input(type='submit',value='Enregistrer', id="boutonEnregistrer") 
